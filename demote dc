@@ -2,3 +2,6 @@ demote DC
 uninstall-addsdomaincontroller -removeapplicationpartitions
 
 if last DC in domain, use the -lastdomaincontrollerindomain flag
+
+
+https://www.ntweekly.com/2016/07/21/how-to-uninstall-a-domain-controller-using-powershell/
