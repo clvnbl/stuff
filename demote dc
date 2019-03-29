@@ -1,0 +1,4 @@
+demote DC
+uninstall-addsdomaincontroller -removeapplicationpartitions
+
+if last DC in domain, use the -lastdomaincontrollerindomain flag
