@@ -1,0 +1,34 @@
+change pass
+    local user: net user USERNAME *
+    domain user: net user /domain USERNAME *
+    ps: Set-ADAccountPassword -Identity $user -Reset -NewPassword (get-credential)
+look for non admin users that can rdp
+look at admin groups for correct accounts
+    look at subgroups that could contain the admin group
+look for local users/delete all but admin
+enable firewall
+    Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
+enable windows defender
+    Uninstall-WindowsFeature -Name Windows-Defender
+    Install-WindowsFeature -Name Windows-Defender
+    Install-WindowsFeature -Name Windows-Defender-GUI
+look at scheduled tasks
+    ps: get-scheduledtasks
+look for SSH keys
+    hidden flie
+look through computer groups
+look through GPOs
+create GPOs 
+    wdigest
+    llmnr
+    disable cmd/powershell restrict
+    local admin password
+    
+raise forest function
+    
+look at all of the windows accessiblity things
+    On-Screen Keyboard: C:\Windows\System32\osk.exe
+    Magnifier: C:\Windows\System32\Magnify.exe
+    Narrator: C:\Windows\System32\Narrator.exe
+    Display Switcher: C:\Windows\System32\DisplaySwitch.exe
+    App Switcher: C:\Windows\System32\AtBroker.exe
